@@ -14,3 +14,4 @@ Use the kit for:
 - 30-day content and reactivation calendar
 - message templates (Roman Hindi/Marathi + English)
 - KPI tracker and formula guide
+- KPI summary CLI tool (`tools/kpi_summary.py`)

@@ -32,6 +32,8 @@ Use this as an operating playbook, not just a strategy document.
    - Shift coverage planner for channel posting, helpdesk, and moderation.
 11. `11-risk-and-escalation-matrix.md`
    - Risk scenarios, severity SLAs, and escalation actions.
+12. `12-kpi-summary-tool.md`
+   - CLI usage guide for generating weekly KPI summaries automatically.
 
 ## Execution model at a glance
 
@@ -72,3 +74,4 @@ Use this as an operating playbook, not just a strategy document.
 2. Import all CSV files into Google Sheets.
 3. Fill owner names and use the Day 1 ready pack to launch immediately.
 4. Review KPI sheet daily for the first 2 weeks.
+5. Run the KPI summary tool during weekly review.
