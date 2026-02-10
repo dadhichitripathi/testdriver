@@ -1,0 +1,13 @@
+Cohort,Day_From_Inactive,Touchpoint_No,Channel,Time_Band,Objective,Template_Reference,CTA,Owner,SLA,Primary_Success_Metric,Fallback_Action
+7-day inactive,7,1,WhatsApp DM,09:30-11:00,Light reminder with high-demand zone,04-message-templates:7-day inactive,Reply YES for today's plan,CRM Support,Same day,Response rate >=25%,Send second nudge after 48h
+7-day inactive,9,2,WhatsApp DM,17:00-19:00,Completion-focused nudge with low target,04-message-templates:7-day inactive,Share available slot timing,CRM Support,Same day,Plan accepted >=15%,Route to zone captain if no response
+7-day inactive,11,3,Helpdesk ping,12:00-14:00,Resolve blocker if not resumed,Helpdesk custom short reply,Send blocker reason (app/payout/time),Helpdesk Lead,<=4h,Blocker identified >=60%,Assign callback queue
+7-day inactive,13,4,Callback,16:00-19:00,Personalized schedule and area plan,Phone call script,Commit next online slot,Zone Captain,<=24h,Reactivated within 3 days >=20%,Move to 15-day flow
+15-day inactive,15,1,WhatsApp DM,10:00-12:00,Structured 2-day restart plan,04-message-templates:15-day inactive,Reply START to receive plan,CRM Support,Same day,Response rate >=20%,Retry at evening slot
+15-day inactive,17,2,WhatsApp DM,18:00-20:00,Incentive window urgency,04-message-templates:15-day inactive,Share preferred zone,CRM Support,Same day,Reactivated within 5 days >=12%,Escalate to callback
+15-day inactive,19,3,Callback,11:00-14:00,Address earnings trust concerns,Phone call script,Agree on first-day target,Zone Captain,<=24h,Call connect >=40%,Send voice-note follow-up
+15-day inactive,21,4,Community invite,15:00-17:00,Move high-intent users to helpdesk group,Helpdesk invite template,Join helpdesk for guided support,Helpdesk Lead,<=24h,Group join rate >=30%,Maintain in nurture list
+30+ day inactive,30,1,WhatsApp DM,10:00-12:00,Comeback offer and assisted plan,04-message-templates:30+ inactive,Reply CALL for assisted restart,CRM Support,Same day,Response rate >=12%,Call within 24h
+30+ day inactive,32,2,Callback,12:00-16:00,Trust rebuild and simple Day-1 goal,Phone call script,Confirm 1st shift timing,Senior Support,<=24h,Call connect >=35%,Second call attempt next day
+30+ day inactive,34,3,WhatsApp voice note,17:00-19:00,Human reassurance and practical plan,Custom voice note,Send preferred area/time,Zone Captain,Same day,Voice-note reply >=15%,Offer stand meetup
+30+ day inactive,36,4,Field assist meetup,08:00-11:00,In-person help for app and process readiness,Field assist checklist,Join today and complete first trips,Field Lead,<=48h,Reactivation within 7 days >=8%,Keep in monthly retry pool
