@@ -1,0 +1,8 @@
+Date,Week,Zone,Partner_Type,Partner_Name,Location,Primary_Contact,Contact_Number,Daily_Footfall_Estimate,QR_Scans,Verified_Joins,Join_Conversion_pct,Retained_After_7d,Inactive_Leads_Identified,Inactive_Leads_Reactivated,Issues_Logged,Action_Next_Day,Field_Owner,Status
+2026-02-10,7,Western,CNG Pump,,,,,0,0,0,0,0,0,0,None,Initial setup,,
+2026-02-11,7,Western,Auto Stand,,,,,0,0,0,0,0,0,0,None,Place poster and train staff,,
+2026-02-12,7,Central/Harbour,CNG Pump,,,,,0,0,0,0,0,0,0,None,Start morning route activation,,
+2026-02-13,7,Central/Harbour,Garage,,,,,0,0,0,0,0,0,0,None,Collect inactive driver leads,,
+2026-02-14,7,South,Auto Stand,,,,,0,0,0,0,0,0,0,None,Weekend high-footfall activation,,
+2026-02-15,7,South,Tea Point,,,,,0,0,0,0,0,0,0,None,Test quick script conversion,,
+2026-02-16,8,Western,CNG Pump,,,,,0,0,0,0,0,0,0,None,Scale top location,,

@@ -1,0 +1,26 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#120B2B"/>
+  <rect x="60" y="60" width="960" height="960" rx="36" fill="#1B1140" stroke="#4338CA" stroke-width="4"/>
+
+  <text x="100" y="150" font-family="Arial" font-size="42" font-weight="700" fill="#DDD6FE">Top Driver Story</text>
+  <text x="100" y="195" font-family="Arial" font-size="26" fill="#C4B5FD">Real weekly effort from Mumbai zone</text>
+
+  <rect x="100" y="240" width="880" height="320" rx="22" fill="#312E81"/>
+  <text x="130" y="320" font-family="Arial" font-size="34" font-weight="700" fill="#FFFFFF">Driver: &lt;DRIVER_NAME_OR_ALIAS&gt;</text>
+  <text x="130" y="380" font-family="Arial" font-size="30" fill="#EDE9FE">Zone: &lt;ZONE&gt;</text>
+  <text x="130" y="440" font-family="Arial" font-size="30" fill="#EDE9FE">Trips completed: &lt;TRIP_COUNT&gt;</text>
+  <text x="130" y="500" font-family="Arial" font-size="30" fill="#EDE9FE">Total earnings (week): &lt;EARNINGS&gt;</text>
+
+  <rect x="100" y="600" width="420" height="220" rx="20" fill="#1D4ED8"/>
+  <text x="130" y="670" font-family="Arial" font-size="32" font-weight="700" fill="#FFFFFF">What worked</text>
+  <text x="130" y="725" font-family="Arial" font-size="27" fill="#DBEAFE">- Peak time focus</text>
+  <text x="130" y="770" font-family="Arial" font-size="27" fill="#DBEAFE">- Zone switching discipline</text>
+
+  <rect x="560" y="600" width="420" height="220" rx="20" fill="#0F766E"/>
+  <text x="590" y="670" font-family="Arial" font-size="32" font-weight="700" fill="#FFFFFF">Tip to others</text>
+  <text x="590" y="725" font-family="Arial" font-size="27" fill="#CCFBF1">&lt;DRIVER_TIP_LINE_1&gt;</text>
+  <text x="590" y="770" font-family="Arial" font-size="27" fill="#CCFBF1">&lt;DRIVER_TIP_LINE_2&gt;</text>
+
+  <text x="100" y="900" font-family="Arial" font-size="28" fill="#DDD6FE">Want to be featured? Maintain consistency this week.</text>
+  <text x="100" y="950" font-family="Arial" font-size="22" fill="#A5B4FC">Official update by OLA Auto Mumbai driver community team.</text>
+</svg>
