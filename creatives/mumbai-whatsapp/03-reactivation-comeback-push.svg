@@ -1,0 +1,27 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#071A12"/>
+  <rect x="60" y="60" width="960" height="960" rx="36" fill="#0B2A1E" stroke="#166534" stroke-width="4"/>
+
+  <text x="100" y="150" font-family="Arial" font-size="42" font-weight="700" fill="#DCFCE7">Comeback Week (Mumbai)</text>
+  <text x="100" y="195" font-family="Arial" font-size="26" fill="#BBF7D0">Special restart support for inactive drivers</text>
+
+  <rect x="100" y="240" width="880" height="220" rx="20" fill="#14532D"/>
+  <text x="130" y="315" font-family="Arial" font-size="36" font-weight="700" fill="#FFFFFF">Step 1: Start Slot</text>
+  <text x="130" y="370" font-family="Arial" font-size="30" fill="#DCFCE7">&lt;TIME_WINDOW&gt; in &lt;ZONE&gt;</text>
+  <text x="130" y="420" font-family="Arial" font-size="28" fill="#DCFCE7">Focus short trips and stay online in peak pockets.</text>
+
+  <rect x="100" y="490" width="420" height="250" rx="20" fill="#1D4ED8"/>
+  <text x="130" y="555" font-family="Arial" font-size="34" font-weight="700" fill="#FFFFFF">Day 1 Target</text>
+  <text x="130" y="625" font-family="Arial" font-size="56" font-weight="700" fill="#FFFFFF">&lt;X_TRIPS&gt; trips</text>
+  <text x="130" y="690" font-family="Arial" font-size="26" fill="#DBEAFE">Keep it simple and consistent.</text>
+
+  <rect x="560" y="490" width="420" height="250" rx="20" fill="#0F766E"/>
+  <text x="590" y="555" font-family="Arial" font-size="34" font-weight="700" fill="#FFFFFF">Potential Bonus</text>
+  <text x="590" y="625" font-family="Arial" font-size="56" font-weight="700" fill="#FFFFFF">&lt;BONUS&gt;</text>
+  <text x="590" y="690" font-family="Arial" font-size="26" fill="#CCFBF1">Based on eligibility + window.</text>
+
+  <rect x="100" y="775" width="880" height="130" rx="16" fill="#134E4A"/>
+  <text x="130" y="850" font-family="Arial" font-size="30" fill="#CCFBF1">Need assisted restart? Contact: &lt;HELPDESK_CONTACT&gt;</text>
+
+  <text x="100" y="970" font-family="Arial" font-size="22" fill="#A7F3D0">Official support. No OTP/UPI sharing.</text>
+</svg>

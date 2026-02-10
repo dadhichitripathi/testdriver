@@ -48,6 +48,14 @@ Use this as an operating playbook, not just a strategy document.
    - Prioritized experiment list to improve traction week by week.
 19. `19-budget-roi-formulas.md`
    - Sheet formulas and weekly decision rules for ROI review.
+20. `20-progress-visualization-dashboard.md`
+   - Dashboard generation guide and review cadence.
+21. `21-official-account-go-live-pack.md`
+   - One-account setup and Day-0 to Day-1 go-live checklist.
+22. `22-live-execution-command-center.csv`
+   - Time-blocked command-center tracker for first 48 hours.
+23. `23-creative-copy-bank.md`
+   - Share-ready captions for operational creatives.
 
 ## Execution model at a glance
 
@@ -89,3 +97,4 @@ Use this as an operating playbook, not just a strategy document.
 3. Fill owner names and use the Day 1 ready pack to launch immediately.
 4. Review KPI sheet daily for the first 2 weeks.
 5. Run the KPI summary tool during weekly review.
+6. Generate dashboard HTML and review in every ops meeting.

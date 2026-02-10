@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>OLA Auto Mumbai WhatsApp Progress Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --panel: #121a31;
+      --panel2: #1a2442;
+      --text: #e8edff;
+      --muted: #98a6d3;
+      --green: #22c55e;
+      --amber: #f59e0b;
+      --blue: #38bdf8;
+      --red: #ef4444;
+      --purple: #a78bfa;
+    }
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(180deg, #0b1020, #0f1730);
+      color: var(--text);
+    }
+    .wrap {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+    }
+    .subtitle {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid #243053;
+      border-radius: 10px;
+      padding: 14px;
+    }
+    .card .label {
+      color: var(--muted);
+      font-size: 12px;
+      margin-bottom: 6px;
+    }
+    .card .value {
+      font-size: 24px;
+      font-weight: bold;
+      line-height: 1.1;
+    }
+    .chart-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .panel {
+      background: var(--panel);
+      border: 1px solid #243053;
+      border-radius: 10px;
+      padding: 12px;
+      min-height: 280px;
+    }
+    .panel h3 {
+      margin: 2px 0 10px 0;
+      font-size: 14px;
+      color: var(--muted);
+      font-weight: 600;
+    }
+    canvas {
+      width: 100% !important;
+      height: 230px !important;
+    }
+    .footnote {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 12px;
+    }
+    @media (max-width: 980px) {
+      .chart-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>OLA Auto Mumbai WhatsApp Progress Dashboard</h1>
+    <div class="subtitle">Generated at 2026-02-10 09:46 UTC</div>
+
+    <div class="cards">
+      <div class="card"><div class="label">Channel followers (latest)</div><div class="value" id="followers_latest">-</div></div>
+      <div class="card"><div class="label">Reactivated drivers (total)</div><div class="value" id="overall_reactivated">-</div></div>
+      <div class="card"><div class="label">Overall reactivation conversion</div><div class="value" id="overall_conv">-</div></div>
+      <div class="card"><div class="label">Avg helpdesk FRT</div><div class="value" id="avg_frt">-</div></div>
+      <div class="card"><div class="label">Incentive completion</div><div class="value" id="completion_pct">-</div></div>
+      <div class="card"><div class="label">Fraud incidents (total)</div><div class="value" id="fraud_total">-</div></div>
+    </div>
+
+    <div class="chart-grid">
+      <div class="panel"><h3>Daily channel followers</h3><canvas id="followersChart"></canvas></div>
+      <div class="panel"><h3>Daily acquisition (followers vs community members)</h3><canvas id="acqChart"></canvas></div>
+      <div class="panel"><h3>Daily view rate vs target</h3><canvas id="viewRateChart"></canvas></div>
+      <div class="panel"><h3>Weekly reactivation conversion by cohort</h3><canvas id="reactivationChart"></canvas></div>
+      <div class="panel"><h3>Weekly helpdesk FRT vs SLA</h3><canvas id="frtChart"></canvas></div>
+      <div class="panel"><h3>Weekly incentive completion and fraud incidents</h3><canvas id="qualityChart"></canvas></div>
+      <div class="panel"><h3>Top partner locations by verified joins</h3><canvas id="partnerChart"></canvas></div>
+      <div class="panel"><h3>Daily incentive completion trend</h3><canvas id="completionChart"></canvas></div>
+    </div>
+
+    <div class="footnote">
+      Targets: View rate >= 35%, 7d reactivation >= 20%, Helpdesk FRT <= 120 min, Incentive completion >= 25%.
+    </div>
+  </div>
+
+  <script>
+    const payload = {"kpi":{"headline":{"followers_latest":0.0,"overall_reactivated":0.0,"overall_reactivation_conversion_pct":null,"avg_helpdesk_frt_min":0.0,"incentive_completion_pct":null,"fraud_incidents_total":0.0},"charts":{"daily_dates":["2026-02-10","2026-02-11","2026-02-12","2026-02-13","2026-02-14","2026-02-15","2026-02-16","2026-02-17","2026-02-18","2026-02-19","2026-02-20","2026-02-21","2026-02-22","2026-02-23","2026-02-24","2026-02-25","2026-02-26","2026-02-27","2026-02-28","2026-03-01","2026-03-02","2026-03-03","2026-03-04","2026-03-05","2026-03-06","2026-03-07","2026-03-08","2026-03-09","2026-03-10","2026-03-11"],"daily_followers_total":[0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"daily_new_followers":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"daily_new_members":[0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0],"daily_view_rate":[0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"daily_helpdesk_frt":[0.0,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"daily_incentive_completion_pct":[null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null,null],"weekly_labels":["W7","W8","W9","W10","W11"],"weekly_conv_7":[null,null,null,null,null],"weekly_conv_15":[null,null,null,null,null],"weekly_conv_30":[null,null,null,null,null],"weekly_frt_avg":[0.0,null,null,null,null],"weekly_incentive_completion":[null,null,null,null,null],"weekly_new_followers":[0.0,0.0,0.0,0.0,0.0],"weekly_fraud_incidents":[0.0,0.0,0.0,0.0,0.0]},"targets":{"view_rate_pct":35,"helpdesk_frt_min":120,"reactivation_7d_pct":20,"incentive_completion_pct":25}},"partner":{"labels":["Unknown Partner | Unknown Location"],"joins":[0.0],"conversion_pct":[null]}};
+    const h = payload.kpi.headline;
+    const c = payload.kpi.charts;
+    const t = payload.kpi.targets;
+    const p = payload.partner;
+
+    function fmtNum(v) {
+      if (v === null || v === undefined || Number.isNaN(v)) return "n/a";
+      return new Intl.NumberFormat("en-IN", { maximumFractionDigits: 0 }).format(v);
+    }
+
+    function fmtPct(v) {
+      if (v === null || v === undefined || Number.isNaN(v)) return "n/a";
+      return v.toFixed(1) + "%";
+    }
+
+    function fmtMin(v) {
+      if (v === null || v === undefined || Number.isNaN(v)) return "n/a";
+      return v.toFixed(1) + " min";
+    }
+
+    document.getElementById("followers_latest").innerText = fmtNum(h.followers_latest);
+    document.getElementById("overall_reactivated").innerText = fmtNum(h.overall_reactivated);
+    document.getElementById("overall_conv").innerText = fmtPct(h.overall_reactivation_conversion_pct);
+    document.getElementById("avg_frt").innerText = fmtMin(h.avg_helpdesk_frt_min);
+    document.getElementById("completion_pct").innerText = fmtPct(h.incentive_completion_pct);
+    document.getElementById("fraud_total").innerText = fmtNum(h.fraud_incidents_total);
+
+    const common = {
+      responsive: true,
+      maintainAspectRatio: false,
+      plugins: {
+        legend: {
+          labels: { color: "#d5defe" }
+        }
+      },
+      scales: {
+        x: {
+          ticks: { color: "#98a6d3" },
+          grid: { color: "rgba(152,166,211,0.15)" }
+        },
+        y: {
+          ticks: { color: "#98a6d3" },
+          grid: { color: "rgba(152,166,211,0.15)" }
+        }
+      }
+    };
+
+    new Chart(document.getElementById("followersChart"), {
+      type: "line",
+      data: {
+        labels: c.daily_dates,
+        datasets: [
+          { label: "Followers", data: c.daily_followers_total, borderColor: "#38bdf8", tension: 0.25 }
+        ]
+      },
+      options: common
+    });
+
+    new Chart(document.getElementById("acqChart"), {
+      type: "bar",
+      data: {
+        labels: c.daily_dates,
+        datasets: [
+          { label: "Channel new followers", data: c.daily_new_followers, backgroundColor: "#22c55e" },
+          { label: "Community new members", data: c.daily_new_members, backgroundColor: "#a78bfa" }
+        ]
+      },
+      options: common
+    });
+
+    new Chart(document.getElementById("viewRateChart"), {
+      type: "line",
+      data: {
+        labels: c.daily_dates,
+        datasets: [
+          { label: "View rate %", data: c.daily_view_rate, borderColor: "#f59e0b", tension: 0.25 },
+          { label: "Target %", data: c.daily_dates.map(() => t.view_rate_pct), borderColor: "#22c55e", borderDash: [5,5] }
+        ]
+      },
+      options: common
+    });
+
+    new Chart(document.getElementById("reactivationChart"), {
+      type: "bar",
+      data: {
+        labels: c.weekly_labels,
+        datasets: [
+          { label: "7d conversion %", data: c.weekly_conv_7, backgroundColor: "#38bdf8" },
+          { label: "15d conversion %", data: c.weekly_conv_15, backgroundColor: "#a78bfa" },
+          { label: "30+d conversion %", data: c.weekly_conv_30, backgroundColor: "#f59e0b" }
+        ]
+      },
+      options: common
+    });
+
+    new Chart(document.getElementById("frtChart"), {
+      type: "line",
+      data: {
+        labels: c.weekly_labels,
+        datasets: [
+          { label: "Avg FRT (min)", data: c.weekly_frt_avg, borderColor: "#ef4444", tension: 0.25 },
+          { label: "SLA (min)", data: c.weekly_labels.map(() => t.helpdesk_frt_min), borderColor: "#22c55e", borderDash: [5,5] }
+        ]
+      },
+      options: common
+    });
+
+    new Chart(document.getElementById("qualityChart"), {
+      data: {
+        labels: c.weekly_labels,
+        datasets: [
+          { type: "line", label: "Incentive completion %", data: c.weekly_incentive_completion, borderColor: "#22c55e", yAxisID: "y" },
+          { type: "bar", label: "Fraud incidents", data: c.weekly_fraud_incidents, backgroundColor: "#ef4444", yAxisID: "y1" }
+        ]
+      },
+      options: {
+        ...common,
+        scales: {
+          x: common.scales.x,
+          y: {
+            position: "left",
+            ticks: { color: "#98a6d3" },
+            grid: { color: "rgba(152,166,211,0.15)" }
+          },
+          y1: {
+            position: "right",
+            ticks: { color: "#98a6d3" },
+            grid: { drawOnChartArea: false }
+          }
+        }
+      }
+    });
+
+    new Chart(document.getElementById("partnerChart"), {
+      type: "bar",
+      data: {
+        labels: p.labels,
+        datasets: [
+          { label: "Verified joins", data: p.joins, backgroundColor: "#22c55e" },
+          { label: "Conversion %", data: p.conversion_pct, backgroundColor: "#38bdf8" }
+        ]
+      },
+      options: {
+        ...common,
+        indexAxis: "y"
+      }
+    });
+
+    new Chart(document.getElementById("completionChart"), {
+      type: "line",
+      data: {
+        labels: c.daily_dates,
+        datasets: [
+          { label: "Daily incentive completion %", data: c.daily_incentive_completion_pct, borderColor: "#22c55e", tension: 0.25 },
+          { label: "Target %", data: c.daily_dates.map(() => t.incentive_completion_pct), borderColor: "#f59e0b", borderDash: [5,5] }
+        ]
+      },
+      options: common
+    });
+  </script>
+</body>
+</html>

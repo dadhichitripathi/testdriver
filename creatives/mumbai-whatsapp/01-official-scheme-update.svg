@@ -1,0 +1,22 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#0F172A"/>
+  <rect x="60" y="60" width="960" height="960" rx="36" fill="#111B3A" stroke="#2A3E72" stroke-width="4"/>
+  <text x="100" y="140" font-family="Arial" font-size="34" font-weight="700" fill="#FFFFFF">OLA Auto Mumbai Update (Official)</text>
+  <rect x="100" y="180" width="880" height="2" fill="#2A3E72"/>
+
+  <text x="110" y="250" font-family="Arial" font-size="40" font-weight="700" fill="#38BDF8">&lt;SCHEME_NAME&gt;</text>
+  <text x="110" y="305" font-family="Arial" font-size="30" fill="#E2E8F0">Eligibility: &lt;ELIGIBILITY&gt;</text>
+  <text x="110" y="355" font-family="Arial" font-size="30" fill="#E2E8F0">Window: &lt;WINDOW&gt;</text>
+  <text x="110" y="405" font-family="Arial" font-size="30" fill="#E2E8F0">Zones: &lt;ZONES&gt;</text>
+  <text x="110" y="455" font-family="Arial" font-size="30" fill="#E2E8F0">Target: &lt;TRIP_TARGET&gt; trips</text>
+
+  <rect x="100" y="500" width="880" height="180" rx="18" fill="#1D4ED8"/>
+  <text x="140" y="580" font-family="Arial" font-size="54" font-weight="700" fill="#FFFFFF">Bonus: &lt;BONUS&gt;</text>
+  <text x="140" y="635" font-family="Arial" font-size="30" fill="#DBEAFE">Complete target within window to unlock payout.</text>
+
+  <rect x="100" y="720" width="880" height="110" rx="14" fill="#0B5E40"/>
+  <text x="130" y="785" font-family="Arial" font-size="30" fill="#DCFCE7">Helpdesk: &lt;HELPDESK_CONTACT&gt;</text>
+
+  <text x="100" y="905" font-family="Arial" font-size="24" fill="#FCA5A5">Safety: OLA never asks for OTP, UPI PIN, or password.</text>
+  <text x="100" y="950" font-family="Arial" font-size="22" fill="#94A3B8">Use official channel updates only.</text>
+</svg>

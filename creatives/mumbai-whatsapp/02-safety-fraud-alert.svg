@@ -1,0 +1,23 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1080" height="1080" fill="#1A0A0A"/>
+  <rect x="60" y="60" width="960" height="960" rx="36" fill="#2A0E0E" stroke="#7F1D1D" stroke-width="4"/>
+
+  <circle cx="160" cy="150" r="34" fill="#EF4444"/>
+  <text x="148" y="162" font-family="Arial" font-size="42" font-weight="700" fill="#FFFFFF">!</text>
+  <text x="220" y="165" font-family="Arial" font-size="44" font-weight="700" fill="#FEE2E2">Safety Alert (Official)</text>
+
+  <rect x="100" y="220" width="880" height="540" rx="20" fill="#3B1010"/>
+  <text x="130" y="290" font-family="Arial" font-size="36" font-weight="700" fill="#FFFFFF">Protect Your Account:</text>
+  <text x="130" y="355" font-family="Arial" font-size="31" fill="#FECACA">1) Never share OTP</text>
+  <text x="130" y="410" font-family="Arial" font-size="31" fill="#FECACA">2) Never share UPI PIN</text>
+  <text x="130" y="465" font-family="Arial" font-size="31" fill="#FECACA">3) Never share password</text>
+  <text x="130" y="520" font-family="Arial" font-size="31" fill="#FECACA">4) Ignore fake payment requests</text>
+  <text x="130" y="575" font-family="Arial" font-size="31" fill="#FECACA">5) Trust only admin messages</text>
+  <text x="130" y="650" font-family="Arial" font-size="28" fill="#FEE2E2">Report suspicious messages immediately.</text>
+  <text x="130" y="700" font-family="Arial" font-size="28" fill="#FEE2E2">Helpdesk: &lt;HELPDESK_CONTACT&gt;</text>
+
+  <rect x="100" y="800" width="880" height="130" rx="16" fill="#7F1D1D"/>
+  <text x="130" y="870" font-family="Arial" font-size="30" font-weight="700" fill="#FFFFFF">OLA team never asks for money in WhatsApp groups.</text>
+
+  <text x="100" y="980" font-family="Arial" font-size="22" fill="#FCA5A5">Share this alert in all zone groups.</text>
+</svg>

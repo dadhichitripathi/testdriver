@@ -15,3 +15,5 @@ Use the kit for:
 - message templates (Roman Hindi/Marathi + English)
 - KPI tracker and formula guide
 - KPI summary CLI tool (`tools/kpi_summary.py`)
+- Progress dashboard generator (`tools/generate_progress_dashboard.py`)
+- Editable creative templates (`creatives/mumbai-whatsapp/`)
