@@ -42,6 +42,12 @@ Use this as an operating playbook, not just a strategy document.
    - Field partner rollout across CNG pumps, stands, and garages.
 16. `16-partner-location-tracker-template.csv`
    - Sheet template to track location-level scans, joins, and retention.
+17. `17-budget-and-roi-model.csv`
+   - Weekly cost and contribution tracker for commercial discipline.
+18. `18-experiment-backlog.md`
+   - Prioritized experiment list to improve traction week by week.
+19. `19-budget-roi-formulas.md`
+   - Sheet formulas and weekly decision rules for ROI review.
 
 ## Execution model at a glance
 
