@@ -34,6 +34,14 @@ Use this as an operating playbook, not just a strategy document.
    - Risk scenarios, severity SLAs, and escalation actions.
 12. `12-kpi-summary-tool.md`
    - CLI usage guide for generating weekly KPI summaries automatically.
+13. `13-week-1-zone-ready-post-pack.md`
+   - Ready-send Week 1 channel post copy for Mumbai operations.
+14. `14-driver-captain-program.md`
+   - Captain recruitment, scorecard, incentives, and anti-gaming checks.
+15. `15-offline-partnership-activation-plan.md`
+   - Field partner rollout across CNG pumps, stands, and garages.
+16. `16-partner-location-tracker-template.csv`
+   - Sheet template to track location-level scans, joins, and retention.
 
 ## Execution model at a glance
 
